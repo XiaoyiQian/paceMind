@@ -5,7 +5,7 @@ A monorepo scaffold for a fitness app that tracks performance from Strava and Ap
 ## Structure
 
 - `frontend/` – Next.js frontend
-- `backend/` – Node.js Express API
+- `backend/` – Python Flask Express API
 - `ai/` – Python (Flask) placeholder for future ML/AI service
 
 ## Getting Started
