@@ -59,7 +59,7 @@ export default function HomePage() {
     })
     .then(data => {
       console.log("Fetch data:", data);
-      setStatusMessage(data.status);
+      setStatusMessage(data.message);
     })
     .catch(err => {
       console.error("Fetch error:", err);
