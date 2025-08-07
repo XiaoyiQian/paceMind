@@ -47,6 +47,8 @@ import os
 def create_app():
     app = Flask(__name__)
     
+    from .db import init_db_command
+    app.cli.add_command(init_db_command)
     # Configuration
     app.config.from_mapping(
         SECRET_KEY='dev',
@@ -55,6 +57,9 @@ def create_app():
     
     # Ensure instance folder exists
     os.makedirs(app.instance_path, exist_ok=True)
+
+    from .routes.auth import bp
+    app.register_blueprint(bp)
     
     # Routes
     @app.route('/')
